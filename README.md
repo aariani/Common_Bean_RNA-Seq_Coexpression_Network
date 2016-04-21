@@ -1,6 +1,6 @@
 # Common Bean RNA-Seq Coexpression Network
 
-This repo contains Coexpression Network and Pearson Correlation Coefficients (PCC) based on expression analysis of 85 RNA-Seq datasets. The RNA-Seq data were downloaded from the [NCBI SRA archive] (http://www.ncbi.nlm.nih.gov/sra).
+###This repo contains Coexpression Network and Pearson Correlation Coefficients (PCC) based on expression analysis of 85 RNA-Seq datasets. The RNA-Seq data were downloaded from the [NCBI SRA archive] (http://www.ncbi.nlm.nih.gov/sra).
 
 ===========================================================================================================
 
@@ -11,9 +11,10 @@ In the folder "Coexpression_Data" there are 2 files with the inferred Coexpressi
 * Pvul_coexp_net_PCC.txt is a similar to Pvul_coexp_net.txt but contains a 3rd column showing the PCC.
 
 Both the files used a PCC threshold of 0.8
-These data could be directly used for research studies
+These data are compatible with several programs for network visualization and analysis like 'Cytoskape' and could be directly used for research studies
 
 ===========================================================================================================
+
 The folder "raw_coexpression" contains 18053 files named with common bean gene ID accordingly to [Phytozome platform] (www.phytozome.net). 
 
 Each file is tab-delimited and contains 2 columns:
@@ -27,5 +28,5 @@ The network could be inferred using the inferNet script in this folder.
 ===========================================================================================================
 ## Download the repo
 
-For downloading this folder to your computer first you need to install git.
+For clone this folder to your computer first you need to install git.
 Let us assume you want to clone this repo into a directory named `proj`:
