@@ -8,6 +8,6 @@ These data could be used for inferring a coexpression network for this species b
 
 In the folder "raw_coexpression" contains 18053 files named with common bean gene ID accordingly to [Phytozome platform] (www.phytozome.net'). Each file is a tab delimited file with 2 columns:
 
-1 GeneID 
-2 Pearson Correlation Coefficient (PCC) between the gene that named the file and the gene in column 1.
+1. GeneID
+2. Pearson Correlation Coefficient (PCC) between the gene that named the file and the gene in column 1.
 
