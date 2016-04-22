@@ -29,17 +29,15 @@ The network could be inferred using the `inferNetwork` script in this folder.
 
 ===========================================================================================================
 
-## Download the repo
+## Download this repo
 
 For clone this folder to your computer first you need to install git.
 Let us assume you want to clone this repo into a directory named `proj`, you will need to open the terminal and type:
 
-    
-   mkdir proj
-   cd proj
-   git clone https://github.com/aariani/Common_Bean_RNA-Seq_Coexpression_Network
+    mkdir proj
+    cd proj
+    git clone https://github.com/aariani/Common_Bean_RNA-Seq_Coexpression_Network
    
-  
 ===========================================================================================================
 
 ## Extract coexpression network
