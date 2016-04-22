@@ -17,7 +17,7 @@ These data are compatible with several programs for network visualization and an
 
 ===========================================================================================================
 
-The folder "raw_coexpression" contains 18053 files named with common bean gene ID accordingly to [Phytozome platform] (www.phytozome.net). 
+The folder `Raw_coexpression` contains 18053 files named with common bean gene ID accordingly to [Phytozome platform] (www.phytozome.net). 
 
 Each file is tab-delimited and contains 2 columns:
 
@@ -46,9 +46,17 @@ For extracting the coexpression netowork you will need the `inferNetwork` script
 To see the command-line option type from the terminal:
 
     inferNetwork -h
-          
-    
-    
-    
+          usage: inferNetwork [-h] [-i INPUTFOLDER] [--pcc] [-t MINPCC] [-o OUTPUTFILE]
+          Program for exctracting coexpression networks based on Pearson Correlation
+          Coefficient (PCC) data
+          optional arguments:
+                    -h, --help             show this help message and exit
+                    -i INPUTFOLDER, --input INPUTFOLDER
+                                            The folder containing the Raw Coexpression data
+                                            (Default: raw_coexpression)
+                    --pcc                   Do you want to export also the PCC value for the  gene?? (Default: False)
+                    -t MINPCC, --threshold MINPCC   
+                                            Minimum threshold for the PCC. Values < than this values will be discarded (Default: 0.8)
+                    -o OUTPUTFILE, --output OUTPUTFILE      Name of output file (Default: CoexpressionNetwork.txt)
 
 
