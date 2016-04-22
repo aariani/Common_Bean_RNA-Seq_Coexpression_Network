@@ -17,7 +17,7 @@ These data are compatible with several programs for network visualization and an
 
 ===========================================================================================================
 
-The folder `Raw_coexpression` contains 18053 files named with common bean gene ID accordingly to [Phytozome platform] (www.phytozome.net). 
+The folder `Raw_coexpression` contains 18050 files named with common bean gene ID accordingly to [Phytozome platform] (www.phytozome.net). 
 
 Each file is tab-delimited and contains 2 columns:
 
@@ -37,12 +37,19 @@ Let us assume you want to clone this repo into a directory named `proj`, you wil
     mkdir proj
     cd proj
     git clone https://github.com/aariani/Common_Bean_RNA-Seq_Coexpression_Network
+
    
 ===========================================================================================================
 
 ## Extract coexpression network
 
-For extracting the coexpression netowork you will need the `inferNetwork` script. This is a simple Python script, so just make sure you have python installed on your computer. Execute the script in the same folder where the "raw_coexpression" folder is (i.e. in this folder)
+For extracting the coexpression netowork you will need the `inferNetwork` script. This is a simple Python script, so just make sure you have python installed on your computer (Python 2.7+). 
+First you need to make the script executable, so from the command-line type:
+
+    cd Common_Bean_RNA-Seq_Coexpression_Network
+    chmod +x inferNetwork
+
+Execute the script in the same folder where the `raw_coexpression` folder is (i.e. in this folder)
 To see the command-line option type from the terminal:
 
     inferNetwork -h
