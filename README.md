@@ -9,8 +9,8 @@ In the folder `Pipelines` there are the scripts used for creating this dataset (
 
 In the folder `Coexpression_Data` there are 2 files with the inferred Coexpression Network:
 
-* Pvul_coexp_net.txt is a tab-delimited file with two column indicating a vertex between two edges (genes)
-* Pvul_coexp_net_PCC.txt is a similar to Pvul_coexp_net.txt but contains a 3rd column showing the PCC.
+* `Pvul_coexp_net.txt` is a tab-delimited file with two column indicating a vertex between two edges (genes)
+* `Pvul_coexp_net_PCC.txt` is a similar to `Pvul_coexp_net.txt` but contains a 3rd column showing the PCC.
 
 Both the files used a PCC threshold of 0.8
 These data are compatible with several programs for network visualization and analysis like [Cytoscape] (http://cytoscape.org/) and could be directly used for research studies
