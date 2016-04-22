@@ -24,7 +24,7 @@ Each file is tab-delimited and contains 2 columns:
 1. GeneID
 2. PCC between the gene that named the file and the gene in column 1.
 
-These data are intended for extracting Common bean coexpression network using custom PCC threshold
+These data are intended for extracting common bean coexpression network using custom PCC threshold
 The network could be inferred using the `inferNetwork` script in this folder.
 
 ===========================================================================================================
