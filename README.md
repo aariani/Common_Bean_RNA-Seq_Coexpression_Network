@@ -54,7 +54,7 @@ To see the command-line option type from the terminal:
 
     inferNetwork -h
         usage: inferNetwork [-h] [-i INPUTFOLDER] [--pcc] [-t MINPCC] [-o OUTPUTFILE]
-        Program for exctracting coexpression networks based on Pearson Correlation
+        Program for exctracting coexpression network based on Pearson Correlation
         Coefficient (PCC) data
         optional arguments:
             -h, --help          show this help message and exit
