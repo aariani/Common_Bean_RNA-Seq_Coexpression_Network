@@ -54,7 +54,7 @@ To see the command-line option type from the terminal:
             -i INPUTFOLDER, --input INPUTFOLDER
                                 The folder containing the Raw Coexpression data
                                 (Default: raw_coexpression)
-            --pcc               Do you want to export also the PCC value for the  gene?? (Default: False)
+            --pcc               Do you want to export also the PCC value between genes?? (Default: False)
             -t MINPCC, --threshold MINPCC   
                                 Minimum threshold for the PCC. Values < than this values will be discarded (Default: 0.8)
             -o OUTPUTFILE, --output OUTPUTFILE      
