@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+from __future__ import print_function
+import argparse
+from commands import getoutput
+
+parser=argparse.ArgumentParser(prog='inferNetwork', description='Program for exctracting coexpression networks based on Pearson Correlation Coefficient (PCC) data')
+parser.add_argument('-i', '--input', dest='inputFolder', default='raw_coexpression', help='The folder containing the Raw Coexpression data (Default: raw_coexpression)')
+parser.add_argument('--pcc', dest='pcc', action='store_true', default=False, help='Do you want to export also the PCC values between genes? (Default: False)')
+parser.add_argument('-t', '--threshold', dest='minPCC', type=float, default=0.8,  help='Minimum threshold for the PCC. Values < than this values will be discarded (Default: 0.8)')
+parser.add_argument('-o', '--output', dest='outputFile', default='CoexpressionNetwork.txt', help='Name of output file (Default: CoexpressionNetwork.txt)')
+
+args=parser.parse_args()
+
+if 'None' in str(args):
+        parser.error('Input parameter missing!! Please check your command line parameters with -h or --help')
+
+### parse arguments
+
+ifolder=args.inputFolder.split('/')[0] ## input folder with all the files
+pcc_threshold=args.minPCC ## minimum threshold for coexpression network
+ofile=args.outputFile ## output file
+pcc=args.pcc
+
+### Create function for inferring co-expression
+def find_coexp(i, h, m): ## Gene Naming the file, List that we will need at the end, m=minimum PCC
+	for line in open(i):
+		line=line.strip().split('\t')
+		if float(line[1])>=m:
+			c=[i, line[0]]
+			c.sort()
+			c.append(line[1])
+			c='\t'.join(c)
+			h.append(c)
+
+###################
+f=getoutput('ls %s/*' % ifolder).split()
+
+l=[]
+for i in f:
+        find_coexp(i, l, pcc_threshold)
+
+
+l=list(set(l))
+for i in l:
+	if pcc:
+		print(i, file=open(ofile, 'a'))
+	else:
+		s=i.split('\t')
+		print(i[0], i[1], sep='\t', file=open(ofile, 'a'))
