@@ -8,7 +8,7 @@ import sys, os, argparse
 parser=argparse.ArgumentParser(prog='calc_PCC.py', description='Program for calculating PCC between genes based on the Pvulgaris_genes_normalized_FPKM.txt file')
 parser.add_argument('-i', '--input', dest='exp_mat', default='Pvulgaris_genes_normalized_FPKM.txt', help='The Normalized expression matrix for common bean genes (Default: Pvulgaris_genes_normalized_FPKM.txt)')
 parser.add_argument('-m', '--min', dest='minpresence', default=0.6, type=float, help=r"The minimum percentage (in decimal) of dataset where a gene is expressed (Default: 0.6 i.e. 60/100)")
-parser.add_argument('-o', '--output', dest='outfolder', default='Raw_PCC', help='The output folder of the PCC data')
+parser.add_argument('-o', '--output', dest='outfolder', default='Raw_PCC', help='The output folder of the PCC data (Default:Raw_PCC)')
 
 args=parser.parse_args()
 
