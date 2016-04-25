@@ -63,4 +63,4 @@ To see the command-line option type from the terminal:
 		-o OUTPUTFILE, --output OUTPUTFILE      
                                 Name of output file (Default: CoexpressionNetwork.txt)
 
-This script allows also to infer network with negative PCC pairs that could be indicative of negative interaction between two genes (`-t` parameter). 
+This script allows also to infer network with negative PCC that could be indicative of negative interaction (repression) between two genes (`-t` parameter).
