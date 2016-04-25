@@ -50,6 +50,6 @@ If you want to modify the default parameters of the `calc_PCC.py` program type:
                         	    The minimum percentage (in decimal) of dataset where a
                         	    gene is expressed (Default: 0.6 i.e. 60/100)
   	   -o OUTFOLDER, --output OUTFOLDER
-                        	    The output folder of the PCC data
+                        	    The output folder of the PCC data (Default:Raw_PCC)
 	
 
