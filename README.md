@@ -32,7 +32,7 @@ Let us assume you want to clone this repo into a directory named `proj`, you wil
 
 ## Extract coexpression network
 
-For extracting the coexpression network you will need first to create the raw PCC data following the instruction in the `Pipelines` folder.
+For extracting the coexpression network you will need first to create the raw PCC data following the instructions in the `Pipelines` folder.
 After re-creating the raw PCC you will need the `inferNetwork` script for create the coexpression network. 
 This is a simple Python script, so just make sure you have python installed on your computer (Python 2.7+).
  
