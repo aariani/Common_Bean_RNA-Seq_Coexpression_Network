@@ -21,10 +21,10 @@
 
 ## How to calculate the raw PCC data
 
-The raw PCC data could be calculated using the `Pvulgaris_genes_normalized_FPKM.txt` files and the `calc_PCC.py' script.
+The raw PCC data could be calculated using the `Pvulgaris_genes_normalized_FPKM.txt` files and the `calc_PCC.py` script.
 For running the `calc_PCC.py` script you will need to install also the [numpy] (http://www.numpy.org/) and [scipy] (https://www.scipy.org/) libraries of python.
 
-By default the `calc_PCC.py` parse the `Pvulgaris_genes_normalized_FPKM.txt` files for obtaining the PCC data across different gene pairs.
+By default `calc_PCC.py` parses the `Pvulgaris_genes_normalized_FPKM.txt` files for obtaining the PCC data across different gene pairs.
 The program considers only genes with detectable expression (i.e. FPKM > 10) in 60% of the RNA-seq data present in the expression table.
 
 The output files are saved in the `Raw_PCC` folder. Each file is tab-delimited and contains 2 columns:
