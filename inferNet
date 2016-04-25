@@ -6,7 +6,7 @@ from commands import getoutput
 parser=argparse.ArgumentParser(prog='inferNetwork', description='Program for exctracting coexpression networks based on Pearson Correlation Coefficient (PCC) data')
 parser.add_argument('-i', '--input', dest='inputFolder', default='raw_coexpression', help='The folder containing the Raw Coexpression data (Default: raw_coexpression)')
 parser.add_argument('--pcc', dest='pcc', action='store_true', default=False, help='Do you want to export also the PCC values between genes? (Default: False)')
-parser.add_argument('-t', '--threshold', dest='minPCC', type=float, default=0.8,  help='Minimum threshold for the PCC. Values < than this values will be discarded (Default: 0.8)')
+parser.add_argument('-t', '--threshold', dest='minPCC', type=float, default=0.8,  help='Threshold of the PCC values for identifying an edge. If positive gene pairs with PCC < than this will be discarded. If negative gene pairs with PCC > that this will be discarded (Default: 0.8)')
 parser.add_argument('-o', '--output', dest='outputFile', default='CoexpressionNetwork.txt', help='Name of output file (Default: CoexpressionNetwork.txt)')
 
 args=parser.parse_args()
@@ -25,12 +25,21 @@ pcc=args.pcc
 def find_coexp(i, h, m): ## Gene Naming the file, List that we will need at the end, m=minimum PCC
 	for line in open(i):
 		line=line.strip().split('\t')
-		if float(line[1])>=m:
-			c=[i, line[0]]
-			c.sort()
-			c.append(line[1])
-			c='\t'.join(c)
-			h.append(c)
+		if m > 0:
+			if float(line[1])>=m:
+				c=[i, line[0]]
+				c.sort()
+				c.append(line[1])
+				c='\t'.join(c)
+				h.append(c)
+		elif m < 0:
+			if float(line[1])<=m:
+				c=[i, line[0]]
+				c.sort()
+				c.append(line[1])
+				c='\t'.join(c)
+				h.append(c)
+
 
 ###################
 f=getoutput('ls %s/*' % ifolder).split()
