@@ -9,7 +9,7 @@
 
 *	`samples.table': Tab-delimited file containing the column names in `Pvulgaris_genes_normalized_FPKM.txt` and the relative SRA run ID of the processed file
 
-*	`calc_PCC.py`: Python script for calculating Pearson Coerraltion Coefficient (PCC) between the genes in `Pvulgaris_genes_normalized_FPKM.txt` (See below)
+*	`calc_PCC.py`: Python script for calculating Pearson Correlation Coefficient (PCC) between the genes in `Pvulgaris_genes_normalized_FPKM.txt` (See below)
 
 *	`download_and_align.py`: Python script for downloading and aligning the different RNA-Seq datasets, accordingly to the informations in the `datalog.csv` file
 
