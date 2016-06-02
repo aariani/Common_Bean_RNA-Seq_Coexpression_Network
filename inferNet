@@ -11,8 +11,8 @@ parser.add_argument('-o', '--output', dest='outputFile', default='CoexpressionNe
 
 args=parser.parse_args()
 
-#if 'None' in str(args):
- #       parser.error('Input parameter missing!! Please check your command line parameters with -h or --help')
+if 'None' in str(args):
+	parser.error('Input parameter missing!! Please check your command line parameters with -h or --help')
 
 ### parse arguments
 
